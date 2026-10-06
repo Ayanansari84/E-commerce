@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" />
+    <title>Your Orders - Amazon.in</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container container-header">
+            <a href="index.html" class="logo-container border-white" style="text-decoration: none; color: inherit;">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon.in Logo" />
+                <span class="dotin">.in</span>
+            </a>
+            <div class="address-container border-white">
+                <p class="hello">Hello</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p id="current-address">Select your address</p>
+                </div>
+            </div>
+            <div class="search-container">
+                <select class="search-select" id="category-select">
+                    <option>All</option>
+                </select>
+                <input type="text" class="search-input" id="search-input" placeholder="Search Amazon.in" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <a href="signin.html" class="login-container border-white" style="text-decoration: none; color: inherit;">
+                <p>Hello,<span>sign in</span></p>
+                <p class="account">Account & Lists</p>
+            </a>
+            <div class="cart-container border-white" id="cart-container">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <h3>Shopping Cart</h3>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-total" id="cart-total">Total: ₹0</div>
+                    <button class="clear-cart" id="clear-cart">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="orders-main">
+        <div class="orders-header">
+            <h2>Your Orders</h2>
+        </div>
+        <div class="orders-tabs">
+            <span class="active">Orders</span>
+            <span>Buy Again</span>
+            <span>Not Yet Shipped</span>
+            <span>Cancelled Orders</span>
+        </div>
+        
+        <!-- Regular Order Example -->
+        <div class="order-card">
+            <div class="order-card-header">
+                <div class="order-info">
+                    <div>
+                        <p>ORDER PLACED</p>
+                        <p>10 May 2024</p>
+                    </div>
+                    <div>
+                        <p>TOTAL</p>
+                        <p>₹1,19,999</p>
+                    </div>
+                    <div>
+                        <p>SHIP TO</p>
+                        <p class="text-blue">John Doe</p>
+                    </div>
+                </div>
+                <div class="order-id">
+                    <p>ORDER # 404-1234567-8901234</p>
+                    <p class="text-blue">View order details</p>
+                </div>
+            </div>
+            <div class="order-card-body">
+                <div class="delivery-status">
+                    <h3>Delivered 12 May</h3>
+                    <p>Package was handed directly to resident.</p>
+                </div>
+                <div class="item-details">
+                    <img src="https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=400" alt="iPhone">
+                    <div class="item-info">
+                        <p class="text-blue">iPhone 15 Pro Max, 256GB, Black Titanium</p>
+                        <p style="color: #565959; font-size: 12px; margin-top: 5px;">Return window closed on 19 May 2024</p>
+                        <button class="btn-secondary" style="margin-top: 10px;">Buy it again</button>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-secondary">Track package</button>
+                        <button class="btn-secondary">Return or replace items</button>
+                        <button class="btn-secondary">Share receipt</button>
+                        <button class="btn-secondary">Write a product review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Returned Order Example -->
+        <div class="order-card">
+            <div class="order-card-header">
+                <div class="order-info">
+                    <div>
+                        <p>ORDER PLACED</p>
+                        <p>1 April 2024</p>
+                    </div>
+                    <div>
+                        <p>TOTAL</p>
+                        <p>₹4,495</p>
+                    </div>
+                    <div>
+                        <p>SHIP TO</p>
+                        <p class="text-blue">John Doe</p>
+                    </div>
+                </div>
+                <div class="order-id">
+                    <p>ORDER # 404-7654321-8901234</p>
+                    <p class="text-blue">View return/refund status</p>
+                </div>
+            </div>
+            <div class="order-card-body">
+                <div class="delivery-status">
+                    <h3>Return complete</h3>
+                    <p>Your refund has been issued to your original payment method.</p>
+                </div>
+                <div class="item-details">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=400" alt="Nike Shoes">
+                    <div class="item-info">
+                        <p class="text-blue">Nike Air Max Shoes, Size 10, Red</p>
+                        <p style="color: #565959; font-size: 12px; margin-top: 5px;">Returned on 5 April 2024</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-secondary">View return label & instructions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

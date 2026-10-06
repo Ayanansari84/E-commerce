@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - Amazon World</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <a href="index.html" class="logo-container border-white" style="text-decoration: none; color: inherit;">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon.in Logo" />
+                <span class="dotin">.in</span>
+            </a>
+            <div class="search-container">
+                <select class="search-select"><option>All</option></select>
+                <input type="text" class="search-input" placeholder="Search Amazon.in" />
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="cart-container border-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" style="margin-top: 20px; background: white; min-height: 80vh;">
+        <div class="container" style="max-width: 800px; padding: 40px 20px;">
+            <h1>Hello. What can we help you with?</h1>
+            <p>Welcome to Customer Service. You can track orders or request returns here.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px; color: black;">
+                <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+                    <h3>Your Orders</h3>
+                    <p>Track packages or edit orders.</p>
+                </div>
+                <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+                    <h3>Returns & Refunds</h3>
+                    <p>Return items and check refund status.</p>
+                </div>
+                <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; grid-column: 1 / -1;">
+                    <h3 style="margin-top: 0;">Your Account Information</h3>
+                    <p style="margin: 8px 0;"><strong>Name:</strong> John Doe</p>
+                    <p style="margin: 8px 0;"><strong>Email:</strong> johndoe@gmail.com</p>
+                    <p style="margin: 8px 0;"><strong>Phone Number:</strong> +91 98765 43210</p>
+                    <p style="margin: 8px 0;"><strong>Address:</strong> 123 Amazon Street, Tech City, India - 110001</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

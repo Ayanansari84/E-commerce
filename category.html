@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" />
+    <title>Amazon World - Category Results</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <a href="index.html" class="logo-container border-white" style="text-decoration: none; color: inherit;">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon.in Logo" />
+                <span class="dotin">.in</span>
+            </a>
+            <div class="search-container">
+                <select class="search-select" id="category-select">
+                    <option>All</option>
+                    <option>Mobiles</option>
+                    <option>Fashion</option>
+                    <option>Electronics</option>
+                    <option>Headphones</option>
+                    <option>Kitchen</option>
+                    <option>Deals</option>
+                </select>
+                <input type="text" class="search-input" id="search-input" placeholder="Search Amazon.in" />
+                <div class="search-icon" id="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="cart-container border-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" style="margin-top: 20px; background: white;">
+        <section class="products-section container">
+            <h2 id="result-heading">Search Results</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Populated by category.js -->
+            </div>
+        </section>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>

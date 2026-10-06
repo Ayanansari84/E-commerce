@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More</title>
+
+    <!--css file-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCV1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container-header">
+            <!-- <a href="index.html" class="logo-container border-white" style="text-decoration: none; color: inherit;">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" alt="Amazon.in Logo" />
+                <span class="dotin">.in</span>
+            </a> -->
+
+            <div class="address-container border-white">
+                <p class="hello">Hello</p>
+                <div class="icon-address">
+                    <i class="fa-solid fa-location-dot icon-location"></i>
+                    <p id="current-address">Select your address</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <select class="search-select" id="category-select">
+                    <option>All</option>
+                    <option>Mobiles</option>
+                    <option>Fashion</option>
+                    <option>Electronics</option>
+                    <option>Headphones</option>
+                    <option>Kitchen</option>
+                    <option>Deals</option>
+                </select>
+                <input type="text" class="search-input" id="search-input" placeholder="Search Amazon.in" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+            <div class="language-container border-white">
+                <p>English</p>
+                <div class="lauguge-image">
+                    <img
+                        src="https://media.istockphoto.com/vectors/vector-flag-of-the-republic-of-india-proportion-23-the-national-flag-vector-id1051236720?k=20&m=1051236720&s=612x612&w=0&h=ATObRTHmTosADa9zaB2dQPn_VAQmG1XYH2x92kzc304=" />
+                </div>
+            </div>
+
+            <!-- <a href="signin.html" class="login-container border-white" style="text-decoration: none; color: inherit;">
+                <p>Hello,<span>sign in</span></p>
+                <p class="account">Account & Lists</p>
+            </a> -->
+
+            <div class="cart-container border-white" id="cart-container">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <h3>Shopping Cart</h3>
+                    <div class="cart-items" id="cart-items"></div>
+                    <div class="cart-total" id="cart-total">Total: ₹0</div>
+                    <button class="clear-cart" id="clear-cart">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--navigation-->
+    <nav class="nav">
+        <div class="container container-nav">
+            <ul>
+                <li class="border-white" id="open-nav-sidebar">
+                    <span class="open-nav-slider">
+                        <i class="fa-solid fa-bars"></i>
+                        All
+                    </span>
+                </li>
+                <!-- <li class="border-white"><a href="category.html?category=all">Best Sellers</a></li>
+                <li class="border-white"><a href="javascript:void(0)" onclick="showDeals(event)">Today's Deals</a></li> -->
+                <li class="border-white"><a href="category.html?category=mobiles">Mobiles</a></li>
+                <li class="border-white"><a href="contact.html">Customer Service</a></li>
+                <li class="border-white"><a href="category.html?category=electronics">Electronics</a></li>
+                <li class="border-white"><a href="category.html?category=kitchen">Kitchen</a></li>
+                <li class="border-white"><a href="category.html?category=fashion">Fashion</a></li>
+                <li class="border-white"><a href="category.html?category=books">Books</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--sidebar navigation-->
+    <div class="sidebar-container-navigation" id="sidebar-container-navigation-id">
+        <div class="sidebar-left-part">
+            <div class="sidebar-top" onclick="window.location.href='signin.html'" style="cursor: pointer;">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2>Hello, <span>sign in</span></h2>
+            </div>
+            <div class="sidebar-wrap">
+                <div class="sidebar-item">
+                    <h2>Trending</h2>
+                    <p><a href="category.html?category=all" style="text-decoration: none; color: inherit;">Best Sellers</a></p>
+                    <p><a href="category.html?category=all" style="text-decoration: none; color: inherit;">New Releases</a></p>
+                    <p><a href="#footwear" onclick="document.getElementById('sidebar-navigation-close').click()" style="text-decoration: none; color: inherit;">Footwear</a></p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Digital Content And Devices</h2>
+                    <p><a href="category.html?category=ebooks" style="text-decoration: none; color: inherit;">E-Books</a></p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Shop By Category</h2>
+                    <p><a href="category.html?category=mobiles">Mobiles</a></p>
+                    <p><a href="category.html?category=electronics">Electronics</a></p>
+                    <p><a href="category.html?category=fashion">Fashion</a></p>
+                    <p><a href="category.html?category=headphones">Headphones</a></p>
+                    <p><a href="category.html?category=all">See All</a></p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Help & Settings</h2>
+                    <p><a href="contact.html" style="text-decoration: none; color: inherit;">Your Account</a></p>
+                    <p><a href="contact.html" style="text-decoration: none; color: inherit;">Customer Service</a></p>
+                    <p><a href="signin.html" style="text-decoration: none; color: inherit;">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+        <button id="sidebar-navigation-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!--image slider -->
+    <section class="hero-section">
+        <div class="image-container">
+            <div class="image-list">
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71cp9PVuTfL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61GnAucagBL._SX3000_.png" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71qlKqpJnlL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/71cQMXCLSvL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61O72XhcEkL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61VuJdpjvaL._SX3000_.jpg" />
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61UrRx+3LLL._SX3000_.jpg" />
+                </div>
+            </div>
+
+            <div class="image-btn-container">
+                <button class="slider-btn" id="slide-btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn" id="slide-btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!--today deals section-->
+    <section class="today_deals_container" id="today-deals">
+        <div class="today_deals_heading">
+            <i class="fa-solid fa-fire"></i>
+            <p>Today's Deals <a href="category.html?category=deals">See all</a></p>
+        </div>
+        <div class="today_deals_product_container">
+            <div class="today_deals_product_list" id="today_deals_product_list">
+                <!-- JS populated -->
+            </div>
+            <div class="today_deals_btn_container">
+                <button class="today_deal_btn" id="today_deal_btn_prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="today_deal_btn" id="today_deal_btn_next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!--footwear section-->
+    <section class="today_deals_container" id="footwear">
+        <div class="today_deals_heading">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <p>Footwear <a href="category.html?category=fashion&query=shoes">See all</a></p>
+        </div>
+        <div class="today_deals_product_container">
+            <div class="today_deals_product_list" id="footwear_product_list">
+                <!-- JS populated -->
+            </div>
+            <div class="today_deals_btn_container">
+                <button class="today_deal_btn" id="footwear_btn_prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="today_deal_btn" id="footwear_btn_next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!--product cards promo-->
+    <main class="main">
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Up to 60% off | Styles for Men</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80&w=200" alt="Clothing" />
+                        <p>Clothing</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=200" alt="Footwear" />
+                        <p>Footwear</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=200" alt="Watches" />
+                        <p>Watches</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=200" alt="Bags" />
+                        <p>Bags & Luggage</p>
+                    </div>
+                </div>
+                <button class="card-product-btn" onclick="window.location.href='category.html?category=fashion'">see more</button>
+            </div>
+            <!-- Reduced duplicates for cleanliness -->
+            <div class="card-product">
+                <h2>Redefine your living room</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=200" alt="Sofa" />
+                        <p>Sofa cum beds</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1505797149-43b007662973?auto=format&fit=crop&q=80&w=200" alt="Chairs" />
+                        <p>Office chairs</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?auto=format&fit=crop&q=80&w=200" alt="Bean bags" />
+                        <p>Bean bags</p>
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=200" alt="Furniture" />
+                        <p>Explore all</p>
+                    </div>
+                </div>
+                <button class="card-product-btn">Visit furniture store</button>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <section class="products-section container" id="products-section">
+            <h2>Featured Products</h2>
+            <div class="search-results" id="search-results">
+                <p>No products found. Start searching...</p>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="back-to-top" onclick="window.scrollTo(0,0)">Back to top</div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
